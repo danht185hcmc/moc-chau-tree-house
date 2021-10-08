@@ -1,0 +1,164 @@
+.section {
+  padding: 100px 0;
+
+  &--bg-blue {
+    background-color: #f4f4f4;
+  }
+
+  &__title {
+    position: relative;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+
+    font-family: var(--font-family-heading);
+    font-size: 54px;
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40%;
+      height: 2px;
+
+      background-color: var(--primary-color);
+    }
+  }
+
+  &__sub-title {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 15px;
+    color: #666;
+  }
+
+  &__text-content {
+    font-size: 16px;
+    line-height: 24px;
+    color: #888;
+  }
+
+  &__maxim {
+    margin-top: 20px;
+    font-family: var(--font-family-heading);
+    font-size: 36px;
+    color: #aaa;
+  }
+}
+
+.section__title.txt--center::before {
+  @include centerAbsolute('left');
+  width: 80px;
+}
+
+.accommodation {
+  margin-top: 5rem;
+
+  &__img {
+    position: relative;
+    margin-bottom: 15px;
+
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+
+    & > img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+
+      transition: all 0.3s ease-in;
+
+      &:hover {
+        &:first-child {
+          opacity: 0;
+        }
+        &:last-child {
+          opacity: 1;
+        }
+      }
+    }
+
+    & > img:first-child {
+      opacity: 1;
+    }
+
+    & > img:last-child {
+      opacity: 0;
+    }
+  }
+
+  &__content {
+    text-align: center;
+
+    & > p {
+      font-size: 18px;
+      line-height: 5rem;
+    }
+
+    &:hover .accommodation__type {
+      color: var(--primary-color);
+    }
+  }
+
+  &__type {
+    margin-bottom: 10px;
+
+    font-size: 36px;
+    line-height: 43px;
+    font-weight: 400;
+  }
+}
+
+.blockquote {
+  margin-top: 5rem;
+
+  &__comments {
+    font-size: 24px;
+    font-family: var(--font-family-heading);
+    font-style: italic;
+    text-align: center;
+  }
+
+  &__author-img {
+    width: 100px;
+    aspect-ratio: 1 / 1;
+    margin: 20px auto;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    & > img {
+      @include size(100%);
+    }
+  }
+
+  &__author-name {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+}
+
+.gallery {
+  margin-top: 5rem;
+
+  &__item {
+    display: block;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+}
+
+.article {
+  &__img {
+  }
+
+  &__title {
+  }
+
+  &__content {
+  }
+}

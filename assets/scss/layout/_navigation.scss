@@ -1,0 +1,37 @@
+.navbar {
+  @include flex(row, null, center);
+  font-size: $fs-normal;
+
+  &__menu {
+    @extend .u-reset-list;
+    @include flex(row);
+  }
+
+  &__menu-item {
+    text-transform: uppercase;
+  }
+
+  &__menu-link {
+    @extend .u-reset-link;
+
+    display: block;
+    margin: 0 15px;
+    padding: 0 14px;
+
+    line-height: $header-height;
+    text-shadow: 0 0 0 var(--white-color);
+
+    transition: all 0.2s ease-in;
+
+    &:hover {
+      text-shadow: -5px 5px 2px var(--white-color);
+    }
+  }
+
+  &__search {
+    padding: 0 14px;
+    line-height: $header-height;
+    font-size: 1.3em;
+    cursor: pointer;
+  }
+}

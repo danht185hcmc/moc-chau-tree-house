@@ -1,0 +1,31 @@
+// Configuration and helpers
+@import './abstracts/variables-structure';
+@import './abstracts/functions';
+@import './abstracts/variables';
+@import './abstracts/mixins';
+
+// Base stuff
+@import './base/reset';
+@import './base/animation';
+@import './base/global';
+@import './base/typography';
+
+// Layout-related sections
+@import './layout/header';
+@import './layout/navigation';
+@import './layout/footer';
+
+// Components
+@import './components/button';
+@import './components/slider';
+@import './components/section';
+@import './components/forms';
+
+// Page-specific styles
+@import './pages/about';
+
+// Themes
+@import './themes/light';
+
+// Utilities
+@import './base/utilities';
