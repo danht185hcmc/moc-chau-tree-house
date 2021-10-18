@@ -30,7 +30,11 @@ html {
   color: var(--white-color);
   user-select: none; }
   .header__logo {
-    display: block; }
+    display: block;
+    padding: 10px 0;
+    height: 80px; }
+    .header__logo > img {
+      height: 100%; }
   .header__banner {
     position: absolute;
     top: 0;
@@ -56,6 +60,7 @@ html {
     text-align: center;
     box-shadow: 5px -10px 10px rgba(0, 0, 0, 0.4), -5px 5px 30px rgba(0, 0, 0, 0.4); }
     .header__banner-text h3 {
+      margin-bottom: 10px;
       font-size: 24px;
       text-transform: uppercase;
       font-weight: 400; }
@@ -99,6 +104,23 @@ html {
     font-size: 1.3em;
     cursor: pointer; }
 
+.button {
+  display: block;
+  padding: 1.2rem 2.5rem;
+  margin: 0 auto;
+  max-width: 130px;
+  border-radius: 50px;
+  background-color: var(--primary-color);
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--white-color);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out; }
+  .button:hover {
+    background-color: var(--black-color); }
+
 .section {
   padding: 100px 0; }
   .section--bg-blue {
@@ -107,6 +129,7 @@ html {
     position: relative;
     margin-bottom: 10px;
     padding-bottom: 10px;
+    text-transform: capitalize;
     font-family: var(--font-family-heading);
     font-size: 54px; }
     .section__title::before {

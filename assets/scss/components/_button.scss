@@ -1,0 +1,24 @@
+.button {
+  display: block;
+  padding: 1.2rem 2.5rem;
+  margin: 0 auto;
+  max-width: 130px;
+
+  border-radius: 50px;
+  background-color: var(--primary-color);
+
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--white-color);
+
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: var(--black-color);
+  }
+}
+.button:hover {
+}

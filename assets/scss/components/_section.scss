@@ -10,6 +10,7 @@
     margin-bottom: 10px;
     padding-bottom: 10px;
 
+    text-transform: capitalize;
     font-family: var(--font-family-heading);
     font-size: 54px;
 
@@ -149,16 +150,5 @@
     display: block;
     margin-bottom: 20px;
     width: 100%;
-  }
-}
-
-.article {
-  &__img {
-  }
-
-  &__title {
-  }
-
-  &__content {
   }
 }
