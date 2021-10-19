@@ -68,6 +68,10 @@ html {
       font-family: var(--font-family-heading);
       font-size: 120px;
       letter-spacing: 9.5px; }
+    .header__banner-text h4 {
+      font-size: 28px;
+      font-weight: 400;
+      font-style: italic; }
   .header > div:first-child {
     display: flex;
     flex-direction: row;
@@ -123,7 +127,7 @@ html {
 
 .section {
   padding: 100px 0; }
-  .section--bg-blue {
+  .section:nth-child(2n) {
     background-color: #f4f4f4; }
   .section__title {
     position: relative;
@@ -167,17 +171,20 @@ html {
     position: relative;
     margin-bottom: 15px;
     aspect-ratio: 16 / 9;
-    overflow: hidden; }
+    overflow: hidden;
+    background-color: #333333; }
+    .accommodation__img:hover > img:first-child {
+      opacity: 0; }
+    .accommodation__img:hover > img:last-child {
+      opacity: 1; }
     .accommodation__img > img {
       position: absolute;
       top: 0;
-      left: 0;
-      width: 100%;
-      transition: all 0.3s ease-in; }
-      .accommodation__img > img:hover:first-child {
-        opacity: 0; }
-      .accommodation__img > img:hover:last-child {
-        opacity: 1; }
+      left: 50%;
+      height: 100%;
+      transform: translateX(-50%);
+      transition: all 0.3s ease-in;
+      filter: brightness(105%); }
     .accommodation__img > img:first-child {
       opacity: 1; }
     .accommodation__img > img:last-child {
@@ -191,9 +198,13 @@ html {
       color: var(--primary-color); }
   .accommodation__type {
     margin-bottom: 10px;
-    font-size: 36px;
+    font-family: var(--font-family-heading);
+    font-size: 40px;
     line-height: 43px;
     font-weight: 400; }
+
+.accommodation-block {
+  margin-bottom: 25px; }
 
 .blockquote {
   margin-top: 5rem; }
@@ -223,6 +234,22 @@ html {
     display: block;
     margin-bottom: 20px;
     width: 100%; }
+
+.about-img {
+  position: relative;
+  height: 100%; }
+  .about-img__item {
+    position: absolute; }
+    .about-img__item:first-child {
+      top: 0;
+      left: 0;
+      width: 60%;
+      box-shadow: -5px -5px 5px #b3b3b3, -10px -10px 10px gray; }
+    .about-img__item:last-child {
+      bottom: 0;
+      right: 0;
+      width: 50%;
+      box-shadow: 5px 5px 5px #b3b3b3, 10px 10px 10px gray; }
 
 .u-reset-list, .navbar__menu {
   list-style: none; }
